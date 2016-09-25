@@ -1,0 +1,12 @@
+<sute>
+<test name="LoginTest">
+
+    <classes>
+    <class>
+        <class name="travel.pages" />
+        <class name="regression" />
+            </class>
+    </classes>
+
+</test>
+</sute>
