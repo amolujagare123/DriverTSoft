@@ -1,12 +1,17 @@
-<sute>
-<test name="LoginTest">
+<suite name="Login" verbose="1" >
+    <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    </listeners>
+    <test name="LoginTest" >
+        <classes>
+            <class name="regression.LoginTest"/>
+<class name="travel.pages.Login">
 
-    <classes>
-    <class>
-        <class name="travel.pages" />
-        <class name="regression" />
-            </class>
-    </classes>
+</class>
+            <class/>
 
-</test>
-</sute>
+        </classes>
+    </test>
+
+    </suite>
