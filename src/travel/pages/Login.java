@@ -22,9 +22,10 @@ public class Login {
     @FindBy(xpath = "//b")
     public WebElement lblLogo;
 
-    Login(WebDriver driver) {
+ public  Login(WebDriver driver , String url) {
         this.driver = driver;
-        PageFactory.initElements(driver, true);
+     driver.get(url);
+        PageFactory.initElements(driver, this);
         if (!lblLogo.isDisplayed())
             throw new IllegalStateException("this is not login page");
 

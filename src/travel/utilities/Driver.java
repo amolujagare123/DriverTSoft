@@ -43,6 +43,7 @@ public class Driver {
                     myDriver = new ChromeDriver();
                     break;
                 case FIREFOX:
+                    System.setProperty("webdriver.gecko.driver", "Driver/GECKODRIVER.EXE");
                     myDriver = new FirefoxDriver();
                     break;
                 case GHOST:

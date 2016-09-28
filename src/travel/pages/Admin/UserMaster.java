@@ -50,7 +50,7 @@ public class UserMaster {
     @FindBy(id="confirm" )
      public WebElement ClickYes;
 
-    UserMaster(WebDriver driver){
+    public UserMaster(WebDriver driver){
 
         PageFactory.initElements(driver,true);
 
@@ -59,7 +59,10 @@ public class UserMaster {
 
     }
 
-
+public void ClickAddnew()
+{
+    BtnAddNew.click();
+}
     public void setPagetitle(String pagetitle)
     {
         Hedpagetitle.sendKeys(pagetitle);
@@ -107,7 +110,7 @@ public class UserMaster {
         txtAdditInfo.sendKeys(AddInfo);
     }
 
-    public  void setBtnSave()
+    public  void ClickBtnSave()
     {
         btnSave.click();
     }
