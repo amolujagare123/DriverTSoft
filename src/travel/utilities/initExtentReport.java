@@ -9,7 +9,7 @@ public class initExtentReport {
     static ExtentReports extent;
     public static ExtentReports init()
     {
-        extent = new ExtentReports("E:\\selenium-projects-akshay\\DriverTSoft\\Extent-report",false/*, NetworkMode.OFFLINE*/);
+        extent = new ExtentReports("C:\\Users\\Tcraft\\IdeaProjects\\MyProject\\DriverTSoft\\Extent-report\\screenshots",false/*, NetworkMode.OFFLINE*/);
 
    return extent;
     }
