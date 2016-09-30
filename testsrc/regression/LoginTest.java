@@ -3,16 +3,17 @@ package regression;
 import org.openqa.selenium.WebDriver;
 
 
-//import org.junit.BeforeClass;
-//import org.junit.Test;
+import org.junit.BeforeClass;
+import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
 import travel.pages.Login;
+import travel.pages.Logout;
 import travel.utilities.Driver;
 
 import java.util.concurrent.TimeUnit;
@@ -21,34 +22,43 @@ import java.util.concurrent.TimeUnit;
  * Created by Admin on 18/09/2016.
  */
 public class LoginTest {
-    WebDriver mydriver = Driver.getDriver(Driver.DriverTypes.FIREFOX);
-    @BeforeTest
+    WebDriver mydriver = Driver.getDriver(Driver.DriverTypes.CHROME);
 
-    public void test ()
-    {
+    @BeforeClass
+
+    public void test() {
 
         mydriver.manage().window().maximize();
-        mydriver.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);
-
-        Login login =new Login (mydriver,"http://travel.tfleet.in");
         mydriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-        login.setUsername("akshay85pokley@gmail.com");
+        Login login = new Login(mydriver, "http://travel.tfleet.in");
+        mydriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-        login.setPassword("12345");
+        login.setUsername("ashutoshchandan441@gmail.com");
+
+        login.setPassword("chandan1");
 
         login.clickButtonSubmit();
 
     }
-@Test
 
-    public  void test1()
+    @Test
 
-{
-    System.out.println("hi");
-}
+    public void test1()
 
-
+    {
+        System.out.println("hi");
     }
 
 
+    @Test
+    public void logout()
+    {
+        Logout logout=new Logout( mydriver);
+        mydriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+        logout.clicklogoimg();
+        logout.clickLogbtn();
+    }
+
+}
