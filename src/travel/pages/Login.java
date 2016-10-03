@@ -10,6 +10,10 @@ import org.openqa.selenium.support.PageFactory;
  */
 public class Login {
     WebDriver driver;
+
+    @FindBy(id = "msg")
+    public WebElement mesg;
+
     @FindBy(id = "Email_Id")
     public WebElement txtUsername;
 
@@ -45,5 +49,16 @@ public class Login {
     public void clickButtonSubmit()
     {
         btnSubmit.click();
+
+    }
+
+    public WebElement getlblLogo()
+    {
+        return lblLogo;
+    }
+
+    public  WebElement getMesg()
+    {
+        return mesg;
     }
 }
