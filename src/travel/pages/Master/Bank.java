@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.Select;
 public class Bank {
 
     WebDriver driver;
-    @FindBy(xpath = "//h1")
+    @FindBy(xpath = "//*[contains(text(),'Bank Details')]")
     public WebElement Hedpagetitle;
 
     @FindBy(linkText = "Add New")
@@ -76,9 +76,9 @@ public class Bank {
     public Bank(WebDriver driver)
     {
         this.driver = driver;
-        PageFactory.initElements(driver, true);
+      /* PageFactory.initElements(driver, this);
         if (!Hedpagetitle.isDisplayed())
-            throw new IllegalStateException("this is not add bank page");
+            throw new IllegalStateException("this is not add bank page");*/
 
     }
 
@@ -87,7 +87,7 @@ public class Bank {
         return Hedpagetitle;
     }
 
-    public void clikAddNew()
+    public void clickAddNew()
     {
 
         Addnew.click();
@@ -135,14 +135,15 @@ public class Bank {
     public void setbankaddr(String bankaddr)
     {
         txtbankaddr.sendKeys(bankaddr);
-
     }
 
-    public WebElement getbankaddlabel() {
+    public WebElement getbankaddlabel()
+    {
         return bankaddlabel;
     }
 
-    public WebElement getbankaddrelabel() {
+    public WebElement getbankaddrelabel()
+    {
         return bankaddrelabel;
     }
 

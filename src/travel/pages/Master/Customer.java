@@ -131,7 +131,7 @@ public class Customer {
 
     }
 
-    public void clikAddNew()
+    public void clickAddNew()
     {
         AddNew.click();
     }
@@ -149,7 +149,7 @@ public class Customer {
 
     }
 
-    public void setcontactno1(String contactno1)
+ public void setcontactno1(String contactno1)
     {
         txtcontactno1.sendKeys(contactno1);
 
@@ -160,6 +160,7 @@ public class Customer {
         txtcontactname1.sendKeys(contactname1);
 
     }
+
 
     public void setcontactno2(String contactno2)
     {
@@ -312,6 +313,7 @@ public class Customer {
     {
         ClickYes.click();
     }
+
 
 }
 
