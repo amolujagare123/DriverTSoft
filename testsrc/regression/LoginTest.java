@@ -3,15 +3,12 @@ package regression;
 import org.openqa.selenium.WebDriver;
 
 
-import org.junit.BeforeClass;
-import org.junit.Test;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.*;
 import travel.pages.Login;
 import travel.pages.Logout;
 import travel.utilities.Driver;
@@ -35,7 +32,7 @@ public class LoginTest {
         mydriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
         login.setUsername("ashutoshchandan441@gmail.com");
-
+        mydriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         login.setPassword("chandan1");
 
         login.clickButtonSubmit();
