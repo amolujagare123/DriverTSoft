@@ -51,8 +51,8 @@ public class UserMaster {
      public WebElement ClickYes;
 
     public UserMaster(WebDriver driver){
-
-        PageFactory.initElements(driver,true);
+              this.driver=driver;
+        PageFactory.initElements(driver,this);
 
         if(!Hedpagetitle.isDisplayed())
             throw new IllegalStateException("this is not Add user page");

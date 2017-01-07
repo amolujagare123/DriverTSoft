@@ -1,3 +1,4 @@
+/*
 package regression.AdminTest;
 
 import org.testng.annotations.Test;
@@ -5,9 +6,11 @@ import org.testng.annotations.Test;
 //import travel.pages.Menu;
 
 
+*/
 /**
  * Created by AKSHAY on 17/10/2016.
- */
+ *//*
+
 public class DemoTest {
 
     @DataProvider(name = "DP1")
@@ -65,3 +68,4 @@ public class DemoTest {
 
 
 }//end of class
+*/
