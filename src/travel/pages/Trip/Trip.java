@@ -1,4 +1,4 @@
-package travel.pages.Trip;/*
+
 package travel.pages.Trip;
 
 import org.openqa.selenium.Alert;
@@ -6,61 +6,52 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
+
+/*
+*
+ * Created by Minal on 12/26/2016.
 
 */
-/**
- * Created by Minal on 12/26/2016.
- *//*
 
 public class Trip {
     WebDriver driver;
-    */
-/*home page*//*
+    /*home page*/
 
     @FindBy(xpath = "html/body/div[1]/div/section[1]/h1")
-    public WebElement Headpagetitlelbl;
+    public WebElement Headpagetitle;
 
-    @FindBy(xpath = "./*/
-/*[@id='Trip_filter']/label/input")
+    @FindBy(xpath = "[./@id='Trip_filter']/label/input")
     WebElement searchtxt;
 
-    @FindBy(xpath = "./*/
-/*[@id='Trip_filter']/label")
+    @FindBy(xpath = "./[@id='Trip_filter']/label")
     public WebElement searchlbl;
 
-    @FindBy(xpath = "./*/
-/*[@id='Trip']/thead/tr/th[1]")
+    @FindBy(xpath = "./ [@id='Trip']/thead/tr/th[1]")
     public WebElement tripnumberlbl;
 
-    @FindBy(xpath = "./*/
-/*[@id='Trip']/thead/tr/th[2]")
+    @FindBy(xpath = "./ [@id='Trip']/thead/tr/th[2]")
     public WebElement datelbl;
 
-    @FindBy(xpath = "./*/
-/*[@id='Trip']/thead/tr/th[4]")
+    @FindBy(xpath = "./ [@id='Trip']/thead/tr/th[4]")
     public WebElement cusaddresslbl;
 
-    @FindBy(xpath = "./*/
-/*[@id='Trip']/thead/tr/th[5]")
+    @FindBy(xpath = "./ [@id='Trip']/thead/tr/th[5]")
     public WebElement contactnolbl;
 
-    @FindBy(xpath = "./*/
-/*[@id='Trip']/thead/tr/th[6]")
+    @FindBy(xpath = "./ [@id='Trip']/thead/tr/th[6]")
     public WebElement citylbl;
 
-    @FindBy(xpath = "./*/
-/*[@id='Trip']/thead/tr/th[7]")
+    @FindBy(xpath = "./ [@id='Trip']/thead/tr/th[7]")
     public WebElement bookedbylbl;
 
-    @FindBy(xpath = "./*/
-/*[@id='Trip']/thead/tr/th[8]")
+    @FindBy(xpath = "./ [@id='Trip']/thead/tr/th[8]")
     public WebElement statuslbl;
 
     @FindBy(xpath = "html/body/div[1]/div/section[2]/div/div[2]/div/div[1]/a")
     public WebElement addnewbtn;
 
-    */
-/*invoice add trip*//*
+/* add trip*/
 
     @FindBy(xpath = "html/body/div[1]/div/section[1]/h1")
     public WebElement addtriptitlelbl;
@@ -68,40 +59,33 @@ public class Trip {
     @FindBy(xpath = "html/body/div[1]/div/section[2]/div/div/form/div[1]/div[2]/div/div[1]/label")
     public WebElement tripnumberLabel;
 
-    @FindBy(xpath = "./*/
-/*[@id='Item1_Trip_No']")
+    @FindBy(xpath = "./ [@id='Item1_Trip_No']")
     public WebElement tripnumbertxt;
 
     @FindBy(xpath = "html/body/div[1]/div/section[2]/div/div/form/div[1]/div[2]/div/div[2]/label")
     public WebElement customername1Label;
 
-       @FindBy(xpath ="./*/
-/*[@id='ddl_CustNm1']" )
+       @FindBy(xpath ="./ [@id='ddl_CustNm1']" )
     public WebElement custname1txt;
 
-    */
-/*add customer link*//*
+/*add customer link*/
 
-    @FindBy(xpath = "./*/
-/*[@id='btnResp']")
+    @FindBy(xpath = "./ [@id='btnResp']")
     public WebElement plusbtn;
 
-    @FindBy(xpath = "./*/
-/*[@id='exampleModalLabel']")
+    @FindBy(xpath = "./ [@id='exampleModalLabel']")
     public WebElement addcustpagetitlelbl;
 
     @FindBy(xpath = "//div[@class='box-body']/div/div/label[@for='Cust_Nm']")
     public WebElement customernameLabel;
 
-    @FindBy(xpath = "./*/
-/*[@id='Cust_Nm']")
+    @FindBy(xpath = "./ [@id='Cust_Nm']")
     public WebElement customernametxt;
 
     @FindBy(xpath = "//div[@class='box-body']/div/div/label[@for='Cust_Addr']")
     public WebElement addressLabel;
 
-    @FindBy(xpath = "./*/
-/*[@id='Cust_Addr']")
+    @FindBy(xpath = "./ [@id='Cust_Addr']")
     public WebElement addresstxt;
 
     @FindBy(xpath = "//div[@class='box-body']/div/div/label[@for='Cont_No']")
@@ -113,142 +97,119 @@ public class Trip {
     @FindBy(xpath = "//div[@class='box-body']/div/div/label[@for='Cont_Persn']")
     public WebElement contactperson1Label;
 
-    @FindBy(xpath = "./*/
-/*[@id='Cont_Persn']")
+    @FindBy(xpath = "./ [@id='Cont_Persn']")
     public WebElement contactperson1txt;
 
     @FindBy(xpath = "//div[@class='box-body']/div/div/label[@for='Sec_Cont_No']")
     public WebElement contactnumber2Label;
 
-    @FindBy(xpath = "./*/
-/*[@id='ContNo2']")
+    @FindBy(xpath = "./ [@id='ContNo2']")
     public WebElement contactnumber2txt;
 
     @FindBy(xpath = "//div[@class='box-body']/div/div/label[@for='Sec_Cont_Persn']")
     public WebElement contactperson2Label;
 
-    @FindBy(xpath = "./*/
-/*[@id='Sec_Cont_Persn']")
+    @FindBy(xpath = "./ [@id='Sec_Cont_Persn']")
     public WebElement contactperson2txt;
 
     @FindBy(xpath = "//div[@class='box-body']/div/div/label[@for='Cust_Email']")
     public WebElement emailLabel;
 
-    @FindBy(xpath = "./*/
-/*[@id='Cust_Email']")
+    @FindBy(xpath = "./ [@id='Cust_Email']")
     public WebElement emailtxt;
 
     @FindBy(xpath = "//div[@class='box-body']/div/div/label[@for='StateId']")
     public WebElement stateLabel;
 
-    @FindBy(xpath="./*/
-/*[@id='ddlState']")
+    @FindBy(xpath="./ [@id='ddlState']")
     public WebElement selectstate;
 
     @FindBy(xpath = "//div[@class='box-body']/div/div/label[@for='CityId']")
     public WebElement cityLabel;
 
-    @FindBy(xpath = "./*/
-/*[@id='ddlCity']")
+    @FindBy(xpath = "./ [@id='ddlCity']")
     public WebElement selectcity;
 
     @FindBy(xpath = "//div[@class='box-body']/div/div/label[@for='Nationality']")
     public WebElement nationalityLabel;
 
-    @FindBy(xpath = "./*/
-/*[@id='Nationality']")
+    @FindBy(xpath = "./ [@id='Nationality']")
     public WebElement nationalitytxt;
 
     @FindBy(xpath = "//div[@class='box-body']/div/div/label[@for='Pincode']")
     public WebElement pincodeLabel;
 
-    @FindBy(xpath = "./*/
-/*[@id='Pin_Code']")
+    @FindBy(xpath = "./ [@id='Pin_Code']")
     public WebElement pincodetxt;
 
-    @FindBy(xpath = "./*/
-/*[@id='btnSubmit1']")
+    @FindBy(xpath = "./[@id='btnSubmit1']")
     public WebElement submitbtn;
 
-    @FindBy(xpath = "./*/
-/*[@id='msg1']")
+    @FindBy(xpath = "./ [@id='msg1']")
     public WebElement getmsg;
 
-    @FindBy(xpath = "./*/
-/*[@id='cancel1']")
+    @FindBy(xpath = "./ [@id='cancel1']")
     public WebElement cancelbtn;
 
     @FindBy(xpath = "//div[@class='box-body']/div/div/label[@for='Item1_Psngr_Contno']")
     public WebElement passengermobileLabel;
 
-    @FindBy(xpath = "./*/
-/*[@id='ContNo_Wo91']")
+    @FindBy(xpath = "./ [@id='ContNo_Wo91']")
     public WebElement passengermobiletxt;
 
     @FindBy(xpath = "//div[@class='box-body']/div/div/label[@for='Item1_Bk_By']")
     public WebElement bookedbyLabel;
 
-    @FindBy(xpath="./*/
-/*[@id='Item1_Bk_By']")
+    @FindBy(xpath="./ [@id='Item1_Bk_By']")
     public WebElement bookedbytxt;
 
     @FindBy(xpath = "//div[@class='box-body']/div/div/label[@for='Item1_Bkby_Conctno']")
     public WebElement bookedbycontactnumberLabel;
 
 
-    @FindBy(xpath = "./*/
-/*[@id='ContNo_Wo92']")
+    @FindBy(xpath = "./ [@id='ContNo_Wo92']")
     public WebElement bookedbycontactnumbertxt;
 
-    */
-/*passenger details*//*
+/*passenger details*/
 
 
     @FindBy(xpath = "//div[@class='box-body']/div/table[@id='PsgTab']/thead/tr/th[1]")
     public WebElement firstnameLabel;
 
-    @FindBy(xpath="./*/
-/*[@id='PsgTab']/tbody/tr/td[1]/input")
+    @FindBy(xpath="./ [@id='PsgTab']/tbody/tr/td[1]/input")
     public WebElement firstnametxt;
 
     @FindBy(xpath = "//div[@class='box-body']/div/table[@id='PsgTab']/thead/tr/th[2]")
     public WebElement lastnameLabel;
 
-    @FindBy(xpath="./*/
-/*[@id='PsgTab']/tbody/tr/td[2]/input")
+    @FindBy(xpath="./ [@id='PsgTab']/tbody/tr/td[2]/input")
     public WebElement lastnametxt;
 
     @FindBy(xpath = "//div[@class='box-body']/div/table[@id='PsgTab']/thead/tr/th[3]")
     public WebElement ageLabel;
 
-    @FindBy(xpath = "./*/
-/*[@id='PsgTab']/tbody/tr/td[3]/input")
+    @FindBy(xpath = "./ [@id='PsgTab']/tbody/tr/td[3]/input")
     public WebElement agetxt;
 
     @FindBy(xpath = "//div[@class='box-body']/div/table[@id='PsgTab']/thead/tr/th[4]")
     public WebElement genderLabel;
 
-    @FindBy(xpath = "./*/
-/*[@id='PsgTab']/tbody/tr/td[5]/select")
+    @FindBy(xpath = "./ [@id='PsgTab']/tbody/tr/td[5]/select")
     public WebElement genderselect;
 
     @FindBy(xpath = "//div[@class='box-body']/div/table[@id='PsgTab']/thead/tr/th[5]")
     public WebElement specialrequestLabel;
 
-    @FindBy(xpath = "./*/
-/*[@id='PsgTab']/tbody/tr/td[6]/input")
+    @FindBy(xpath = "./ [@id='PsgTab']/tbody/tr/td[6]/input")
     public WebElement specialrequesttxt;
 
-    @FindBy(xpath = "./*/
-/*[@id='btnPsgAdd']")
+    @FindBy(xpath = "./ [@id='btnPsgAdd']")
     public WebElement addbtn;
 
-    @FindBy(xpath = "./*/
-/*[@id='btnSubmit']")
+    @FindBy(xpath = "./ [@id='btnSubmit']")
     public WebElement savebtn;
 
-    */
-/*bus services*//*
+/*bus services*/
 
     @FindBy(xpath = "//div[@class='box-body']/div[@class='row']/div[@class='col-sm-1']/input[@id='chkAll']")
     public WebElement selectallselect;
@@ -304,11 +265,16 @@ public class Trip {
     @FindBy(xpath = "//div[@id='divBus']/form/div/div/div[2]/button")
     public WebElement submitbusbtn;
 
+    @FindBy(xpath = "//div[@class='content-wrapper']//div[3]//button[2]")
+    public WebElement yesalert;
+
+    @FindBy(xpath = "//div[@class='content-wrapper']//div[3]//button[1]")
+    public WebElement noalert;
+
     @FindBy(xpath = "//div[@id='divBus']/form/div/div/div[2]/a")
     public WebElement cancelbusbtn;
 
-    */
-/*airline*//*
+/*airline*/
 
     @FindBy(xpath = "//div[@id='addAirline']/div[1]/h4/a")
     public WebElement airlinebtn;
@@ -322,16 +288,14 @@ public class Trip {
     @FindBy(xpath = "//table[@id='busAir']/thead/tr/th[2]")
     public WebElement flightnumberLabel;
 
-    @FindBy(xpath = "./*/
-/*[@id='busAir']/tbody/tr/td[2]/div/input")
+    @FindBy(xpath = "./ [@id='busAir']/tbody/tr/td[2]/div/input")
     public WebElement flightnumbertxt;
 
     @FindBy(xpath = "//table[@id='busAir']/thead/tr/th[3]")
     public WebElement fareclass1Label;
 
-    @FindBy(xpath = "./*/
-/*[@id='busAir']/tbody/tr/td[3]/select")
-    public WebElement fareclass1txt;
+    @FindBy(xpath = "./ [@id='busAir']/tbody/tr/td[3]/select")
+    public WebElement fareclass1select;
 
     @FindBy(xpath = "//table[@id='busAir']/thead/tr/th[4]")
     public WebElement origin2Label;
@@ -348,8 +312,7 @@ public class Trip {
     @FindBy(xpath = "//table[@id='busAir']/thead/tr/th[5]")
     public WebElement flexibilitydaysLabel;
 
-    @FindBy(xpath = "./*/
-/*[@id='busAir']/tbody/tr/td[6]/input")
+    @FindBy(xpath = "./ [@id='busAir']/tbody/tr/td[6]/input")
     public WebElement flexibilitydaystxt;
 
     @FindBy(xpath="//table[@id='busAir']/thead/tr/th[5]")
@@ -361,9 +324,8 @@ public class Trip {
     @FindBy(xpath = "//table[@id='busAir']/thead/tr/th[6]")
     public WebElement supplier2Label;
 
-    @FindBy(xpath = "./*/
-/*[@id='airlineSup0']")
-    public WebElement supplier2txt;
+    @FindBy(xpath = "./ [@id='airlineSup0']")
+    public WebElement supplier2select;
 
     @FindBy(xpath="//div[@id='divCar']/form/div/div/div[2]/input[@id='btnAdd']")
     public WebElement addairlinebtn;
@@ -377,8 +339,7 @@ public class Trip {
     @FindBy(xpath="//div[@id='divCar']/form/div/div/div[2]/a")
     public WebElement cancelairlinebtn;
 
-    */
-/*car service*//*
+/*car service*/
 
     @FindBy(xpath = "//div[@id='addCar']/div[1]/h4/a")
     public  WebElement carservicebtn;
@@ -393,14 +354,13 @@ public class Trip {
     public  WebElement carnameLabel;
 
     @FindBy(xpath = "//table[@id='Cartab']/tbody/tr/td/select[@id='CarId0']")
-    public WebElement carnametxt;
+    public WebElement carnameselect;
 
     @FindBy(xpath = "//table[@id='Cartab']/thead/tr/th[3]")
     public  WebElement cartypeLabel;
 
-    @FindBy(xpath = "./*/
-/*[@id='CarType0']")
-    public WebElement cartypetxt;
+    @FindBy(xpath = "./ [@id='CarType0']")
+    public WebElement cartypeselect;
 
     @FindBy(xpath = "//table[@id='Cartab']/thead/tr/th[4]")
     public  WebElement pickuppointLabel;
@@ -412,20 +372,19 @@ public class Trip {
     public  WebElement fromdateLabel;
 
     @FindBy(xpath = "//div[@id='datetimepickerCar_0']/span[@class='input-group-addon']")
-    public WebElement fromdatetct;
+    public WebElement fromdateselect;
 
     @FindBy(xpath = "//table[@id='Cartab']/thead/tr/th[6]")
     public  WebElement todateLabel;
 
     @FindBy(xpath = "//div[@id='datetimepickerCar1_0']/span[1]/span")
-    public WebElement todatetxt;
+    public WebElement todateselect;
 
     @FindBy(xpath = "//table[@id='Cartab']/thead/tr/th[7]")
     public  WebElement suppliernameLabel;
 
-    @FindBy(xpath = "./*/
-/*[@id='CarSup0']")
-    public WebElement suppliernametxt;
+    @FindBy(xpath = "./ [@id='CarSup0']")
+    public WebElement suppliernameselect;
 
     @FindBy(xpath = "//div[@id='divCar']/form/div/div/div[2]/input[@id='btnAddCar']")
     public WebElement addcarbtn;
@@ -439,8 +398,7 @@ public class Trip {
     @FindBy(xpath = "//div[@id='divCar']/form/div/div/div[2]/a")
     public WebElement cancelcarbtn;
 
-*/
-/*hotelservice*//*
+/*hotelservice*/
 
 
     @FindBy(xpath = "//div[@id='addHotel']/div[1]/h4/a")
@@ -462,7 +420,7 @@ public class Trip {
     public  WebElement roomtypeLabel;
 
     @FindBy(xpath = "//table[@id='Hoteltab']/tbody/tr/td/select[@id='HotelType0']")
-    public WebElement roomtypetxt;
+    public WebElement roomtypeselect;
 
     @FindBy(xpath = "//table[@id='Hoteltab']/thead/tr/th[4]")
     public  WebElement checkinLabel;
@@ -479,9 +437,8 @@ public class Trip {
     @FindBy(xpath = "//table[@id='Hoteltab']/thead/tr/th[6]")
     public  WebElement suppliername2Label;
 
-    @FindBy(xpath = "./*/
-/*[@id='HotelSup0']")
-    public WebElement suppliername2txt;
+    @FindBy(xpath = "./ [@id='HotelSup0']")
+    public WebElement suppliername2select;
 
     @FindBy(xpath = "//div[@id='divHotel']/form/div/div/div[2]/input[@id='btnAddHotel']")
     public WebElement addhotelbtn;
@@ -495,8 +452,7 @@ public class Trip {
     @FindBy(xpath = "//div[@id='divHotel']/form/div/div/div[2]/a")
     public WebElement cancelhotelbtn;
 
-    */
-/*insurance*//*
+//*insurance*/
 
     @FindBy(xpath = "//div[@id='addInsur']/div[1]/h4/a")
     public WebElement insurancebtn;
@@ -516,16 +472,14 @@ public class Trip {
     @FindBy(xpath = "//table[@id='Insurtab']/thead/tr/th[3]")
     public WebElement insurancetypeLabel;
 
-    @FindBy(xpath = "./*/
-/*[@id='InsurType0']")
-    public WebElement insurancetypetxt;
+    @FindBy(xpath = "./ [@id='InsurType0']")
+    public WebElement insurancetypeselect;
 
     @FindBy(xpath = "")//table[@id='Insurtab']/thead/tr/th[4]
     public WebElement suppliername3Label;
 
-    @FindBy(xpath = "./*/
-/*[@id='SuppId0']")
-    public WebElement supplier3txt;
+    @FindBy(xpath = "./ [@id='SuppId0']")
+    public WebElement supplier3select;
 
     @FindBy(xpath = "//div[@id='divInsur']/form/div/div/div[2]/button")
     public WebElement submitinsurancebtn;
@@ -533,8 +487,7 @@ public class Trip {
     @FindBy(xpath = "//div[@id='divInsur']/form/div/div/div[2]/a")
     public WebElement cancelinsurancebtn;
 
-    */
-/*miscellaneous service*//*
+/*miscellaneous service*/
 
     @FindBy(xpath = "//div[@id='addMisc']/div[1]/h4/a")
     public WebElement miscellaneousbtn;
@@ -549,7 +502,7 @@ public class Trip {
     public WebElement suppliername4Label;
 
     @FindBy(xpath = "//select[@id='MiscSup0']")
-    public WebElement suppliername4txt;
+    public WebElement suppliername4select;
 
     @FindBy(xpath = "//div[@id='divMisc']/form/div/div/div[2]/button")
     public WebElement savemiscbtn;
@@ -557,8 +510,7 @@ public class Trip {
     @FindBy(xpath = "//div[@id='divMisc']/form/div/div/div[2]/a")
     public WebElement cancelmiscbtn;
 
-    */
-/*passport service*//*
+/*passport service*/
 
     @FindBy(xpath = "//div[@id='addPassport']/div[1]/h4/a']")
     public WebElement passportbtn;
@@ -573,7 +525,7 @@ public class Trip {
     public WebElement suppliername5Label;
 
     @FindBy(xpath = "//select[@id='PP_Sup0']")
-    public WebElement suppliername5txt;
+    public WebElement suppliername5select;
 
     @FindBy(xpath = "//table[@id='PPtab']/thead/tr/th[3]")
     public WebElement documentreceivedLabel;
@@ -587,8 +539,7 @@ public class Trip {
     @FindBy(xpath = "//div[@id='divPassport']/form/div/div/div[2]/a")
     public WebElement cancelpassbtn;
 
-    */
-/*railway service*//*
+/*railway service*/
 
     @FindBy(xpath = "//div[@id='addRlwy']/div[1]/h4/a")
     public WebElement railwaybtn;
@@ -603,7 +554,7 @@ public class Trip {
     public WebElement fareclassLabel;
 
     @FindBy(xpath = "//div[@class='box-body']/div/table[@id='Rlwytab']/tbody/tr/td[2]/select")
-    public WebElement fareclasstxt;
+    public WebElement fareclassselect;
 
     @FindBy(xpath = "//div[@class='box-body']/div/table/thead/tr/th[3]")
     public WebElement fromLabel;
@@ -633,7 +584,7 @@ public class Trip {
     public WebElement suppliername6Lable;
 
     @FindBy(xpath = "//div[@class='box-body']/div/table[@id='Rlwytab']/tbody/tr/td[7]/select")
-    public WebElement suppliername6tct;
+    public WebElement suppliername6select;
 
     @FindBy(xpath = "//div[@id='divRlway']/form/div/div/div[2]/input[@id='btnAddRlwy']")
     public WebElement addrlwaybtn;
@@ -647,8 +598,7 @@ public class Trip {
     @FindBy(xpath = "//div[@id='divRlway']/form/div/div/div[2]/a")
     public WebElement cancelrlwaybtn;
 
-    */
-/*visa service*//*
+/*visa service*/
 
     @FindBy(xpath = "//div[@id='addVisa']/div[1]/h4/a")
     public WebElement visabtn;
@@ -657,7 +607,7 @@ public class Trip {
     public WebElement visatypeLabel;
 
     @FindBy(xpath = "//div[@class='box-body']/div/table[@id='Visatab']/tbody/tr/td[1]/select")
-    public WebElement visatypetxt;
+    public WebElement visatypeselect;
 
     @FindBy(xpath = "//div[@class='box-body']/div/table[@id='Visatab']/thead/tr/th[5]")
     public WebElement documentreceived1Label;
@@ -681,7 +631,7 @@ public class Trip {
     public WebElement suppliername7Label;
 
     @FindBy(xpath = "//div[@class='box-body']/div/table[@id='Visatab']/tbody/tr/td[5]/select")
-    public WebElement suppliername7txt;
+    public WebElement suppliername7select;
 
     @FindBy(xpath = "//div[@id='divVisa']/form/div/div/div[2]/button")
     public WebElement savevisabtn;
@@ -689,15 +639,17 @@ public class Trip {
     @FindBy(xpath = "//div[@id='divVisa']/form/div/div/div[2]/a")
     public WebElement cancelvisabtn;
 
-    public Trip(WebDriver driver){
+    public Trip(WebDriver driver)
+    {
         this.driver = driver;
         PageFactory.initElements(driver,true);
-        if(!addtriptitle.isDisplayed())
+        if(!Headpagetitle.isDisplayed())
             throw new IllegalStateException("this is not Add user page");
     }
-    public void setHeadpagetitlelbl(String headpagetitle)
+    /*grid page*/
+    public void setHeadpagetitle(String headpagetitle)
     {
-        Headpagetitlelbl.sendKeys(headpagetitle);
+        Headpagetitle.sendKeys(headpagetitle);
     }
     public void setSearchtxt(String search)
     {
@@ -733,12 +685,13 @@ public class Trip {
     }
     public void setStatuslbl(String status)
     {
-        searchlbl.sendKeys(statuslbl);
+        searchlbl.sendKeys(status);
     }
     public void setAddnewbtn()
     {
         addnewbtn.click();
     }
+    /*trip page*/
     public void setAddtriptitlelbl(String addtriptitle)
     {
         addtriptitlelbl.sendKeys(addtriptitle);
@@ -755,6 +708,7 @@ public class Trip {
     {
         customername1Label.sendKeys(customername1);
     }
+    /*customer  details*/
     public void setPlusbtn()
     {
         plusbtn.click();
@@ -887,6 +841,7 @@ public class Trip {
     {
         selectallselect.sendKeys(selectall);
     }
+    /*passenger details*/
     public void setFirstnameLabel(String firstname)
     {
         firstnameLabel.sendKeys(firstname);
@@ -916,8 +871,10 @@ public class Trip {
         genderLabel.sendKeys(gender);
     }
     public void setGenderselect(String gender)
+
     {
-        genderselect.sendKeys(gender);
+        Select combo = new Select(genderselect);
+        combo.selectByVisibleText(gender);
     }
     public void setSpecialrequestLabel(String specialrequest)
     {
@@ -935,6 +892,7 @@ public class Trip {
     {
         savebtn.click();
     }
+    /*bus services*/
     public void setBusbtn()
     {
         busbtn.click();
@@ -952,8 +910,10 @@ public class Trip {
         bustypeLabel.sendKeys(bustype);
     }
     public void setBustypeselect(String bustype)
+
     {
-        bustypeselect.sendKeys(bustype);
+        Select combo = new Select(bustypeselect);
+        combo.selectByVisibleText(bustype);
     }
     public void setOrigin1Label(String origin1)
     {
@@ -985,20 +945,35 @@ public class Trip {
     }
     public void setSupplierselect(String supplier)
     {
-        supplierselect.sendKeys(supplier);
+        Select combo = new Select(supplierselect);
+        combo.selectByVisibleText(supplier);
     }
     public void setAddbusbtn()
     {
         addbusbtn.click();
     }
     public void setRemovebusbtn()
+
     {
         removebusbtn.click();
+    }
+    public void setSubmitbusbtn()
+    {
+        submitbtn.click();
+    }
+    public void setYesalert()
+    {
+        yesalert.click();
+    }
+    public void setNoalert()
+    {
+        noalert.click();
     }
     public void setCancelbusbtn()
     {
         cancelbusbtn.click();
     }
+    /*airline service*/
     public void setAirlinebtn()
     {
         airlinebtn.click();
@@ -1023,9 +998,11 @@ public class Trip {
     {
         fareclass1Label.sendKeys(fareclass1);
     }
-    public void setFareclass1txt(String fareclass1)
+    public void setFareclass1select(String fareclass1)
+
     {
-        fareclass1txt.sendKeys(fareclass1);
+        Select combo = new Select(fareclass1select);
+        combo.selectByVisibleText(fareclass1);
     }
     public void setOrigin2Label(String origin2)
     {
@@ -1063,9 +1040,11 @@ public class Trip {
     {
         supplier2Label.sendKeys(supplier2);
     }
-    public void setSupplier2txt(String supplier2)
+    public void setSupplier2select(String supplier2)
+
     {
-        supplier2txt.sendKeys(supplier2);
+        Select combo = new Select(supplier2select);
+        combo.selectByVisibleText(supplier2);
     }
     public void setAddairlinebtn()
     {
@@ -1083,6 +1062,7 @@ public class Trip {
     {
         cancelairlinebtn.click();
     }
+    /*car service*/
     public void setCarservicebtn()
     {
         carservicebtn.click();
@@ -1099,7 +1079,390 @@ public class Trip {
     {
         carnameLabel.sendKeys(carname);
     }
+    public void setCarnameselect(String carname)
 
+    {
+        Select combo = new Select(carnameselect);
+        combo.selectByVisibleText(carname);
+    }
+    public void setCartypeLabel(String cartype)
+    {
+        cartypeLabel.sendKeys(cartype);
+    }
+    public void setCartypeselect(String cartype)
 
+    {
+        Select combo = new Select(cartypeselect);
+        combo.selectByVisibleText(cartype);
+    }
+    public void setPickuppointLabel(String pickuppoint)
+    {
+        pickuppointLabel.sendKeys(pickuppoint);
+
+    }
+    public void setPickuppointtxt(String pickuppoint)
+    {
+        pickuppointtxt.sendKeys(pickuppoint);
+    }
+    public void setFromdateLabel(String fromdate)
+    {
+        fromdateLabel.sendKeys(fromdate);
+    }
+    public void setFromdateselect(String fromdate)
+    {
+        fromdateselect.sendKeys(fromdate);
+    }
+    public void setTodateLabel(String todate)
+    {
+        todateselect.sendKeys(todate);
+    }
+    public void setSuppliernameLabel(String suppliername)
+    {
+        suppliernameLabel.sendKeys(suppliername);
+    }
+    public void setSuppliernameselect(String suppliername)
+
+    {
+        Select combo = new Select(suppliernameselect);
+        combo.selectByVisibleText(suppliername);
+    }
+    public void setAddcarbtn()
+    {
+        addcarbtn.click();
+    }
+    public void setSubmitcarbtn()
+    {
+        submitcarbtn.click();
+    }
+    public void setRemovecarbtn()
+    {
+        removecarbtn.click();
+    }
+    public void setCancelcarbtn()
+    {
+        cancelcarbtn.click();
+    }
+    /*hotel service*/
+    public void setHotelbtn()
+    {
+        hotelbtn.click();
+    }
+    public void setHotelnameLabel(String hotelname)
+    {
+        hotelnameLabel.sendKeys(hotelname);
+    }
+    public void setHotelnametxt(String hotelname)
+    {
+        hotelnametxt.sendKeys(hotelname);
+    }
+    public void setHotellocationLabel(String hotellocation)
+    {
+        hotellocationLabel.sendKeys(hotellocation);
+    }
+    public void setHotellocationtxt(String hotellocation)
+    {
+        hotellocationtxt.sendKeys(hotellocation);
+    }
+    public void setRoomtypeLabel(String roomtype)
+
+    {
+        roomtypeLabel.sendKeys(roomtype);
+    }
+    public void setRoomtypeselect(String roomtype)
+    {
+        Select combo = new Select(roomtypeselect);
+        combo.selectByVisibleText(roomtype);
+    }
+    public void setCheckinLabel(String checkin)
+    {
+        checkinLabel.sendKeys(checkin);
+    }
+    public void setCheckintxt(String checkin)
+    {
+        checkintxt.sendKeys(checkin);
+    }
+    public void setCheckoutLabel(String checkout)
+    {
+        checkoutLabel.sendKeys(checkout);
+    }
+    public void setCheckouttxt(String checkout)
+    {
+        checkouttxt.sendKeys(checkout);
+    }
+    public void setSuppliername2Label(String suppliername2)
+    {
+        supplier2Label.sendKeys(suppliername2);
+    }
+    public void setSuppliername2select(String suppliername2)
+    {
+        Select combo = new Select(suppliername2select);
+        combo.selectByVisibleText(suppliername2);
+    }
+    public void setAddhotelbtn()
+    {
+        addhotelbtn.click();
+    }
+    public void setRemovehotelbtn()
+    {
+        removehotelbtn.click();
+    }
+    public void setSubmithotelbtn()
+    {
+        submithotelbtn.click();
+    }
+    public void setCancelhotelbtn()
+    {
+        cancelhotelbtn.click();
+    }
+    /*insurance service*/
+    public void setInsurancebtn()
+    {
+        insurancebtn.click();
+    }
+    public void setSubmissiondate1Label(String submissiondate1)
+    {
+        submissiondate1Label.sendKeys(submissiondate1);
+    }
+    public void setSubmissiondate1txt(String submissiondate1)
+    {
+        submissiondate1txt.sendKeys(submissiondate1);
+    }
+    public void setInsuredbyLabel(String insuredby)
+    {
+        insuredbyLabel.sendKeys(insuredby);
+    }
+    public void setInsuredbytxt(String insuredby)
+    {
+        insuredbytxt.sendKeys(insuredby);
+    }
+    public void setInsurancetypeLabel(String insurancetype)
+    {
+        insurancetypeLabel.sendKeys(insurancetype);
+    }
+    public void setInsurancetypeselect(String insurancetype)
+    {
+        Select combo = new Select(insurancetypeselect);
+        combo.selectByVisibleText(insurancetype);
+    }
+    public void setSuppliername3Label(String suppliername3)
+    {
+        suppliername3Label.sendKeys(suppliername3);
+    }
+    public void setSupplier3select(String supplier3)
+    {
+        Select combo = new Select(supplier3select);
+        combo.selectByVisibleText(supplier3);
+    }
+    public void setSubmitinsurancebtn()
+    {
+        submitinsurancebtn.click();
+    }
+    public void setCancelinsurancebtn()
+    {
+        cancelinsurancebtn.click();
+    }
+    /*miscellaneous service*/
+    public void setMiscellaneousbtn()
+    {
+        miscellaneousbtn.click();
+    }
+    public void setServicedetailsLabel(String servicedetails)
+    {
+        servicedetailsLabel.sendKeys(servicedetails);
+    }
+    public void setServicedetailstxt(String servicedetails)
+    {
+        servicedetailstxt.sendKeys(servicedetails);
+    }
+    public void setSuppliername4Label(String suppliername4)
+    {
+        suppliername4Label.sendKeys(suppliername4);
+    }
+    public void setSuppliername4select(String suppliername4)
+    {
+        Select combo = new Select(suppliername4select);
+        combo.selectByVisibleText(suppliername4);
+    }
+    public void setSavemiscbtn()
+    {
+        savemiscbtn.click();
+    }
+    public void setCancelmiscbtn()
+    {
+        cancelmiscbtn.click();
+    }
+    /*passport service*/
+    public void setPassportbtn()
+    {
+        passportbtn.click();
+    }
+    public void setAppointmentdateLabel(String appointmentdate)
+    {
+        appointmentdateLabel.click();
+    }
+    public void setAppointmentdatetxt(String appointmentdate)
+    {
+        appointmentdatetxt.click();
+    }
+    public void setSuppliername5Label(String suppliername5)
+    {
+        suppliername5Label.sendKeys(suppliername5);
+    }
+    public void setSuppliername5select(String suppliername5)
+    {
+        Select combo = new Select(suppliername5select);
+        combo.selectByVisibleText(suppliername5);
+    }
+    public void setDocumentreceivedLabel(String documentreceived)
+    {
+        documentreceived1Label.sendKeys(documentreceived);
+    }
+    public void setDocumentreceivedtxt(String documentreceived)
+    {
+        documentreceived1txt.sendKeys(documentreceived);
+    }
+    public void setSavepassbtn()
+    {
+        savepassbtn.click();
+    }
+    public void setCancelpassbtn()
+    {
+        cancelpassbtn.click();
+    }
+    /*railway service*/
+    public void setRailwaybtn()
+
+    {
+        railwaybtn.click();
+    }
+    public void setTrainnoLabel(String trainno)
+    {
+        trainnoLabel.sendKeys(trainno);
+    }
+    public void setTrainnotxt(String trainno)
+    {
+        trainnotxt.sendKeys(trainno);
+    }
+    public void setFareclassLabel(String fareclass)
+    {
+        fareclassLabel.sendKeys(fareclass);
+    }
+    public void setFareclassselect(String fareclass)
+    {
+        Select combo = new Select(fareclassselect);
+        combo.selectByVisibleText(fareclass);
+    }
+    public void setFromLabel(String from)
+    {
+        fromLabel.sendKeys(from);
+    }
+    public void setFromtxt(String from)
+    {
+        fromtxt.sendKeys(from);
+    }
+    public void setToLabel(String to)
+    {
+        toLabel.sendKeys(to);
+    }
+    public void setTotxt(String to)
+    {
+        totxt.sendKeys(to);
+    }
+    public void setSectorLabel(String sector)
+    {
+        sectorLabel.sendKeys(sector);
+    }
+    public void setSectortxt(String sector)
+    {
+        sectortxt.sendKeys(sector);
+    }
+    public void setJourneydateLabel(String journeydate)
+    {
+        journeydateLabel.sendKeys(journeydate);
+    }
+    public void setJourneydatetxt(String journeydate)
+    {
+        journeydatetxt.sendKeys(journeydate);
+    }
+    public void setSuppliername6Lable(String suppliername6)
+    {
+        suppliername6Lable.sendKeys(suppliername6);
+    }
+    public void setSuppliername6select(String suppliername6)
+    {
+        Select combo = new Select(suppliername6select);
+        combo.selectByVisibleText(suppliername6);
+    }
+    public void setAddrlwaybtn()
+    {
+        addrlwaybtn.click();
+    }
+    public void setRemoverlwaybtn()
+    {
+        removerlwaybtn.click();
+    }
+    public void setSaverlwaybtn()
+    {
+        saverlwaybtn.click();
+    }
+    public void setCancelrlwaybtn()
+    {
+        cancelrlwaybtn.click();
+    }
+    /*visa service*/
+    public void setVisabtn()
+    {
+        visabtn.click();
+    }
+    public void setVisatypeLabel(String visatype)
+    {
+        visatypeLabel.sendKeys(visatype);
+    }
+    public void setVisatypeselect(String visatype)
+    {
+        Select combo = new Select(visatypeselect);
+        combo.selectByVisibleText(visatype);
+    }
+    public void setDocumentreceived1Label(String documentreceived1)
+    {
+        documentreceived1Label.sendKeys(documentreceived1);
+    }
+    public void setDocumentreceived1txt(String documentreceived1)
+    {
+        documentreceived1txt.sendKeys(documentreceived1);
+    }
+    public void setSubmissiondateLabel(String submissiondate)
+    {
+        submissiondateLabel.sendKeys(submissiondate);
+    }
+    public void setSubmissiondatetxt(String submissiondate)
+    {
+        submissiondatetxt.sendKeys(submissiondate);
+    }
+    public void setCountrynameLabel(String countryname)
+    {
+        countrynameLabel.sendKeys(countryname);
+    }
+    public void setCountrynametxt(String countryname)
+    {
+        countrynametxt.sendKeys(countryname);
+    }
+    public void setSuppliername7Label(String suppliername7)
+    {
+        suppliername7Label.sendKeys(suppliername7);
+    }
+    public void setSuppliername7select(String suppliername7)
+    {
+        Select combo = new Select(suppliername7select);
+        combo.selectByVisibleText(suppliername7);
+    }
+    public void setSavevisabtn()
+    {
+        visabtn.click();
+    }
+    public void setCancelvisabtn()
+    {
+        cancelbtn.click();
+    }
 }
-*/
+
