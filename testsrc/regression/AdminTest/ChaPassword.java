@@ -60,21 +60,21 @@ public class ChaPassword {
 
             ChangePassword changePassword =new ChangePassword(driver);
             changePassword.setOldPassword(oldpassword);
-            changePassword.setOldPassword(NewPassword);
-            changePassword.setOldPassword(ConfirmPassword);
+            changePassword.setNewPass(NewPassword);
+            changePassword.setRetPassword(ConfirmPassword);
             changePassword.clickChangeBtn();
             changePassword.setClickYes();
 
             String actual = "";
-            try {
-                actual = driver.findElement(By.linkText(Actual)).getText();
-                Assert.assertEquals(actual.equals(Expected), "Test Pass");
-            } catch (AssertionError e) {
-                System.out.println("faill");
-            }
-        } catch (Exception e) {
-
+        try {
+            actual = driver.findElement(By.linkText(Actual)).getText();
+            Assert.assertEquals(actual.equals(Expected), "Test Pass");
+        } catch (AssertionError e) {
+            System.out.println("faill");
         }
+    } catch (Exception e) {
+
+    }
 
     } @DataProvider
     public Object[][] Change_password() throws IOException {
@@ -85,7 +85,7 @@ public class ChaPassword {
         HSSFWorkbook workbook = new HSSFWorkbook(fileInputStream);
 
         HSSFSheet worksheet = workbook.getSheet("ChangePassword");
-       int rowcount=worksheet.getPhysicalNumberOfRows();
+        int rowcount=worksheet.getPhysicalNumberOfRows();
        //  int rowcount = worksheet.getLastRowNum();
         String[][] data = new String[rowcount - 1][5];
         for (int i = 1; i < rowcount; i++) {

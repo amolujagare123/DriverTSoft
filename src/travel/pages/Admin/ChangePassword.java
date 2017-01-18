@@ -40,9 +40,12 @@ public class ChangePassword {
     @FindBy(linkText = "Cancel")
     public WebElement canBtn;
 
-    ChangePassword(WebDriver driver){
+    @FindBy(id="confirm" )
+    public WebElement ClickYes;
 
-        PageFactory.initElements(driver,true);
+    public ChangePassword(WebDriver driver){
+        this.driver=driver;
+        PageFactory.initElements(driver,this);
         if(!PageTitle.isDisplayed())
             throw new IllegalStateException("this is not Change Password page");
     }
@@ -76,6 +79,11 @@ public class ChangePassword {
     {
         canBtn.click();
     }
+    public  void setClickYes()
+    {
+        ClickYes.click();
+    }
+
 
 
 }
