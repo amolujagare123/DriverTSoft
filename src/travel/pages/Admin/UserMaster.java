@@ -16,12 +16,17 @@ public class UserMaster {
     @FindBy(xpath = "//h1")
    public WebElement Hedpagetitle;
 
+    @FindBy(xpath = "//div[@class='content-wrapper']/section/h1")
+    public WebElement Pagelogo;
 
     @FindBy(linkText = "Add New")
-  public   WebElement BtnAddNew;
+    public   WebElement BtnAddNew;
 
     @FindBy(id="Emp_Nm")
-   public WebElement txtEmployeeName;
+    public WebElement txtEmployeeName;
+
+    @FindBy(id="Emp_Nm")
+    public WebElement labelEmployeeName;
 
     @FindBy( id="Password")
     public WebElement txtPassword;

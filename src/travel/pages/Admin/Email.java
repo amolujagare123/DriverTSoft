@@ -71,6 +71,12 @@ WebDriver driver;
         throw new IllegalStateException("this is not Email page");
     }
 
+    public WebElement getLogo()
+    {
+        return Logo;
+    }
+
+
     public WebElement getEmployeeName()
     {
         return EmployeeName;
@@ -96,6 +102,21 @@ WebDriver driver;
         return  Enquirylabel;
     }
 
+
+    public WebElement getTriplabel()
+    {
+        return  Triplabel;
+    }
+
+    public WebElement getInvoicelable()
+    {
+        return  Invoicelable;
+    }
+
+    public WebElement getVoucherlable()
+    {
+        return  Voucherlable;
+    }
     public void ClickEnquiry()
     {
         Enquiry.click();
