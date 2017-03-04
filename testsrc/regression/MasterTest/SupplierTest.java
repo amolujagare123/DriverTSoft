@@ -37,8 +37,8 @@ public class SupplierTest {
 
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-        Login login = new Login(driver, "http://travel.tfleet.in");
-
+        Login login = new Login(driver);
+        driver.get("http://travel.tfleet.in");
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
         login.setUsername("akshay85pokley@gmail.com");
@@ -72,7 +72,7 @@ public class SupplierTest {
             supplier.settxtfaxno(Fax_No);
            // Supplier.setSerivicetx
             supplier.settxtcontactno1(ContNO1);
-            supplier.settxtcontactperson1(ContName1);
+           // supplier.settxtcontactperson1(ContName1);
             supplier.settxtcontactno2(ContNO2);
             supplier.settxtcontactperson2(ContName2);
             supplier.settxtemail(EmailID);

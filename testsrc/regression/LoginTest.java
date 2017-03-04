@@ -28,15 +28,14 @@ public class LoginTest {
         mydriver.manage().window().maximize();
         mydriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-        Login login = new Login(mydriver, "http://travel.tfleet.in");
+        /*Login login = new Login(mydriver, "http://travel.tfleet.in");
         mydriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
         login.setUsername("ashutoshchandan441@gmail.com");
         mydriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         login.setPassword("chandan1");
-
         login.clickButtonSubmit();
-
+*/
     }
 
     @Test

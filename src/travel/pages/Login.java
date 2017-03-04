@@ -26,14 +26,24 @@ public class Login {
     @FindBy(xpath = "//b")
     public WebElement lblLogo;
 
-    public Login(WebDriver driver,String url) {
+    public Login(WebDriver driver) {
         this.driver = driver;
-        driver.get(url);
+
         PageFactory.initElements(driver,this);
         if (!lblLogo.isDisplayed())
             throw new IllegalStateException("this is not login page");
 
     }
+
+    /*public Login(WebDriver driver, String url) {
+
+        this.driver = driver;
+        driver.get(url);
+        PageFactory.initElements(driver,this);
+        if (!lblLogo.isDisplayed())
+            throw new IllegalStateException("this is not login page");
+    }*/
+
 
     public void  setUsername(String username)
     {

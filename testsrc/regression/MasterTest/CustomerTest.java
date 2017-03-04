@@ -39,7 +39,8 @@ WebDriver driver;
 
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-        Login login = new Login(driver, "http://travel.tfleet.in");
+       Login login = new Login(driver);
+            driver.get("http://travel.tfleet.in");
 
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
@@ -65,7 +66,7 @@ WebDriver driver;
             Customer customer=new Customer(driver);
 
             driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-            customer.ClickAddNew();
+            //customer.ClickAddNew();
             customer.setcustomername(CustomerName);
             customer.setaddress(Address);
             customer.setcontactno1(ContNo1);

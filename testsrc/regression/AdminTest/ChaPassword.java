@@ -39,8 +39,8 @@ public class ChaPassword {
 
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-        Login login = new Login(driver, "http://travel.tfleet.in");
-
+        Login login = new Login(driver);
+        driver.get("http://travel.tfleet.in");
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
         login.setUsername("akshay85pokley@gmail.com");
